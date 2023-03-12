@@ -16,7 +16,7 @@ def __close(fstring: str, res: int):
     exit(res)
 
 
-__JSON_CONFIG_PATH = f"/etc/tasks_config.json"
+__JSON_CONFIG_PATH = f"/etc/tasks_config.json" if os.name == "posix" else os.path.join(os.getcwd(), "tasks_config.json")
 if not os.path.exists(__JSON_CONFIG_PATH):
     __close(f"\nCannot find json file {__JSON_CONFIG_PATH}", -1)
 
