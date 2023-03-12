@@ -1,0 +1,12 @@
+[Unit]
+Description=User managed scheduling service
+Requires=default.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 -u /usr/lib/systemd/system/start-linux-task-helper.py
+ExecStop=/usr/lib/systemd/system/stop-linux-task-helper.sh
+ExecReload=( /usr/lib/systemd/system/stop-linux-task-helper.sh && /usr/bin/python3 -u /usr/lib/systemd/system/start-linux-task-helper.py )
+
+[Install]
+WantedBy=multi-user.target
