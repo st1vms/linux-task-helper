@@ -23,9 +23,8 @@ sudo cp -f "$SCRIPT_DIR/$START_SCRIPT_NAME" "$SYSTEMD_DIR/$START_SCRIPT_NAME" &&
 sudo cp -f "$SCRIPT_DIR/$STOP_SCRIPT_NAME" "$SYSTEMD_DIR/$STOP_SCRIPT_NAME" ) \
 \
 
-sudo systemctl daemon-reload
+systemctl daemon-reload
 
-sudo systemctl enable "$SERVICE_FILE_NAME"
-
-echo "Successfully enabled service!"
+echo "Successfully installed service!"
+echo "Enable using 'sudo systemctl enable $SERVICE_FILE_NAME'"
 echo "Start using 'sudo systemctl start $SERVICE_FILE_NAME'"
