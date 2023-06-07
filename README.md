@@ -7,7 +7,7 @@ named
 
 **`tasks_config.json`**
 
-this file must be created manually, inside the current project folder in Windows, or in the **/etc** folder in linux. Changes made to the file will be reflected only when the service/script is restarted.
+this file must be created manually, in the **/etc** folder in linux. Changes made to the file will be reflected only when the service/script is restarted.
 
 The configuration file has this format:
 ```json
@@ -44,9 +44,6 @@ sudo nano /etc/tasks_config.json
 ```
 -----
 
-## Installation ( Windows )
-
-No need for installation on Windows, having your configuration in the current folder, just click on **`run.bat`**, and it will upgrade dependencies and run **`start-linux-task-helper.py`**
 ## Installation ( Linux )
 
 Either download the zip and extract the source folder, or run
