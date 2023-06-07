@@ -7,7 +7,7 @@ named
 
 **`tasks_config.json`**
 
-this file must be created manually, in the **/etc** folder in linux. Changes made to the file will be reflected only when the service/script is restarted.
+this file must be created manually, in the **/etc** folder. Changes made to the file will be reflected only when the service/script is restarted.
 
 The configuration file has this format:
 ```json
@@ -38,13 +38,13 @@ The configuration file has this format:
 - **runsOn** is a list storing 24h formatted clock strings
 "**HH:MM:SS**", if this list is empty, the command will be runned on service start. Otherwise it will schedule command execution based on these times.
 
-### ( Linux only ) An easy way to edit the configuration file is to use nano:
+### An easy way to edit the configuration file is to use nano:
 ```bash
 sudo nano /etc/tasks_config.json
 ```
 -----
 
-## Installation ( Linux )
+## Installation
 
 Either download the zip and extract the source folder, or run
 
